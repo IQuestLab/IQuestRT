@@ -130,7 +130,9 @@ uv run --locked torchrun --standalone --nproc_per_node=8 examples/offline.py \
 ```
 
 Choose a new output file. The JSON records timing, output hashes, environment
-metadata, and cross-rank agreement. Complete-call timing includes prefill and graph
+metadata, and cross-rank agreement. Running the example does not require Git;
+the report does not collect the repository commit or working-tree status.
+Complete-call timing includes prefill and graph
 capture; decode timing excludes the first prefill token. Compilation inside a
 measured call is included. Model revision is caller-supplied metadata.
 

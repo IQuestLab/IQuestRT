@@ -16,25 +16,17 @@ def digest(value):
 
 def provenance(model, revision):
     """Record the loaded package and local assets without hashing all model weights."""
-    import iquestrt
     import torch
     from packaging.utils import canonicalize_name
     from iquestrt.paths import prefetch_fold
 
-    root = Path(iquestrt.__file__).resolve().parent.parent
-    source = {"commit": None, "dirty": None}
-    if (root / ".git").exists():
-        source = {
-            "commit": subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip(),
-            "dirty": bool(subprocess.check_output(["git", "-C", str(root), "status", "--porcelain"], text=True)),
-        }
     files = [Path(model) / name for name in
              ("config.json", "mtp/config.json", "tokenizer_config.json", "tokenizer.json")]
     files.append(Path(prefetch_fold()))
     package_names = {canonicalize_name(d.metadata["Name"])
                      for d in importlib.metadata.distributions()}
     return {
-        "runtime": source, "declared_model_revision": revision,
+        "declared_model_revision": revision,
         "asset_sha256": {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
         # Report installed versions even when build tools expose vendored metadata.
         "packages": {name: importlib.metadata.version(name) for name in sorted(package_names)},

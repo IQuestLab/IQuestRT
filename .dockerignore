@@ -1,0 +1,17 @@
+**
+!Dockerfile
+!.dockerignore
+!uv.lock
+!pyproject.toml
+!README.md
+!LICENSE
+!NOTICE
+!iquestrt/
+!iquestrt/**
+!examples/
+!examples/**
+!tools/
+!tools/**
+**/__pycache__/
+**/*.pyc
+**/*.so

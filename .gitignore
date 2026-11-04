@@ -1,0 +1,33 @@
+# Python environments and build products
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+*.so
+
+# JIT compilation caches
+.tilelang/
+*.cubin
+*.ptx
+tilelang/
+
+# Models, datasets, and generated artifacts
+/models/
+/data/
+/artifacts/
+/runs/
+*.log
+*.safetensors
+*.pt
+*.pth
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key

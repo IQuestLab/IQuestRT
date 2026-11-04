@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools==81.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iquestrt"
+version = "0.1.0"
+description = "Low-latency IQuest-Q1 inference on NVIDIA GPUs"
+readme = "README.md"
+license = "Apache-2.0 AND BSD-3-Clause"
+license-files = ["LICENSE", "NOTICE", "iquestrt/kernels/LICENSE-PyTorch.txt"]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch==2.11.0",
+    "triton==3.6.0",
+    "tilelang==0.1.15",
+    "apache-tvm-ffi==0.1.11",
+    "instanttensor==0.1.9",
+    "numpy==2.2.6",
+    "safetensors==0.6.2",
+    "transformers==4.57.1",
+]
+
+[project.optional-dependencies]
+serve = ["fastapi==0.115.12", "uvicorn==0.34.2"]
+
+[project.urls]
+Repository = "https://github.com/IQuestLab/IQuestRT"
+Issues = "https://github.com/IQuestLab/IQuestRT/issues"
+
+[tool.setuptools.packages.find]
+include = ["iquestrt*"]
+
+[tool.setuptools.package-data]
+"iquestrt.kernels" = ["stop_rule.json"]
+
+[tool.uv]
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+build-constraint-dependencies = ["packaging==26.3"]

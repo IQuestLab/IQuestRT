@@ -1,0 +1,27 @@
+IQuestRT
+Copyright 2026 IQuestRT contributors
+
+The runtime is distributed under the Apache License, Version 2.0.
+
+IQuestRT uses PyTorch, TileLang, Triton, InstantTensor, and other dependencies
+installed separately under their respective licenses. TileRT's execution model
+inspired the fixed-shape runtime design.
+
+The symmetric-memory signal and barrier helpers in iquestrt/kernels/ar_tail.py
+are adapted from PyTorch (torch/csrc/distributed/c10d/symm_mem/
+CUDASymmetricMemory-inl.h), Copyright (c) 2016- Facebook, Inc and its
+contributors, under the BSD 3-Clause License. See
+iquestrt/kernels/LICENSE-PyTorch.txt.
+
+Model weights, tokenizer assets, benchmark datasets, and generated artifacts
+are not included in this distribution and retain their own license terms.
+The expert prefetch file published with releases is derived from the IQuest-Q1
+checkpoint and follows its license terms.
+
+The IQuest name and logo (docs/assets/brand/iquest-mark.png) are not licensed
+under the Apache License, Version 2.0, which grants no trademark rights
+(Section 6). No permission to use them is granted.
+
+The Source Sans 3 and Source Serif 4 fonts in docs/assets/brand are
+Copyright Adobe, distributed under the SIL Open Font License, Version 1.1.
+See docs/assets/brand/OFL.txt and FONTS.txt for notices and provenance.

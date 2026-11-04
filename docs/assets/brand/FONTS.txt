@@ -1,0 +1,20 @@
+Bundled font provenance
+
+These existing WOFF2 assets identify Adobe as the copyright holder and the SIL
+Open Font License 1.1 in their embedded name records. Their copyright notices
+and the complete license are in OFL.txt. "Source" is a Reserved Font Name.
+The font bytes have not been modified by this licensing update.
+
+Upstream projects and license sources:
+https://github.com/adobe-fonts/source-sans
+https://github.com/adobe-fonts/source-serif
+https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md
+https://github.com/adobe-fonts/source-serif/blob/release/LICENSE.md
+
+The original download URL and conversion/subsetting history were not recorded.
+The hashes below identify the bundled files, not a verified upstream release.
+
+SHA-256  File
+7a19a7027e125257d310c6dbd78ae3a30b5ea1e3794d60b12bb28227a003bfda  source-sans-3.woff2
+96e6393209728ab93c334ae739af8a040cd2006c82e8614d6465a8084db88f89  source-serif-4-italic.woff2
+f2ea9c12d2fe9bd3a9589b02ad2c0909da88f30938c91adc838c4f4098f9f9e0  source-serif-4.woff2

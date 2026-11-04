@@ -74,7 +74,7 @@ so web pages cannot reach it through DNS rebinding.
 ```bash
 curl --fail-with-body http://127.0.0.1:8000/v1/messages \
   -H 'Content-Type: application/json' \
-  -d '{"model":"iquest-q1","max_tokens":8192,"messages":[{"role":"user","content":"What is 17 + 25?"}]}'
+  -d '{"model":"IQuest-Q1","max_tokens":8192,"messages":[{"role":"user","content":"What is 17 + 25?"}]}'
 ```
 
 With the Claude Code CLI installed, run `bash tools/claude_code.sh http://127.0.0.1:8000`.

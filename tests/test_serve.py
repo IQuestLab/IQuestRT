@@ -20,7 +20,7 @@ from iquestrt.serve.messages_chat import Renderer
 from iquestrt.serve.metrics import Metrics
 from iquestrt.serve.protocol import SamplingParams
 
-MODEL = "iquest-q1"
+MODEL = "IQuest-Q1"
 TEMPLATE = (
     "{% if tools %}<|im_start|>tools\n{{ tools | tojson }}<|im_end|>\n{% endif %}"
     "{% for m in messages %}<|im_start|>{{ m.role }}\n{{ m.content }}"

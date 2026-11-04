@@ -10,7 +10,7 @@ def main():
     ap.add_argument("--model", help="target checkpoint; draft is its mtp/ directory")
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
-    ap.add_argument("--served-model-name", default="iquest-q1")
+    ap.add_argument("--served-model-name", default="IQuest-Q1")
     ap.add_argument("--chat-template", help="verified Jinja template override")
     ap.add_argument("--check", action="store_true", help="check deployment without loading weights")
     args = ap.parse_args()
